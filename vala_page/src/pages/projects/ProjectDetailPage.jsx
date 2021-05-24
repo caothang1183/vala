@@ -38,7 +38,7 @@ const ProjectDetailPage = () => {
   useEffect(() => {
     let isSubscribed = true;
 
-    axios.get(`https://kagency-api.herokuapp.com/api/projects/${id}`).then(
+    axios.get(`https://vala-web.herokuapp.com/api/projects/${id}`).then(
       (res) => {
         if (isSubscribed) {
           dispath({ type: "FETCH_SUCCESS", payload: res.data });
@@ -74,10 +74,12 @@ const ProjectDetailPage = () => {
           titleContent={stateid.loading ? "Loading" : stateid.posts[0].title}
           content={stateid.loading ? "Loading" : stateid.posts[0].description}
         />
-        <div
-          className="project-content"
-          dangerouslySetInnerHTML={createMarkup()}
-        ></div>
+        <div className="container">
+          <div
+            className="project-content"
+            dangerouslySetInnerHTML={createMarkup()}
+          ></div>
+        </div>
         <div className="container">
           <ProjectSlider projects={projectsRelated} />
         </div>

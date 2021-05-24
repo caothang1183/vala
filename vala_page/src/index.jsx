@@ -5,7 +5,7 @@ import "antd/dist/antd.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import "./index.scss";
-const Kagency = lazy(() => import("./Kagency"));
+const Vala = lazy(() => import("./Vala"));
 
 function CustomLoadingOverlay() {
   return (
@@ -28,7 +28,7 @@ function CustomLoadingOverlay() {
 
 ReactDOM.render(
   <Suspense fallback={<CustomLoadingOverlay />}>
-    <Kagency />
+    <Vala />
   </Suspense>,
   document.getElementById("root")
 );

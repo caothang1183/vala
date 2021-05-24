@@ -71,7 +71,7 @@ const OurWork = () => {
       <div className="OurWork">
         <div className="container">
           <MetaTags>
-            <title>Our Work | KAGENCY</title>
+            <title>Our Work | VALA</title>
             <meta
               name="description"
               content="Kagency tự hào được lựa chọn bởi các đối tác như: Samsung, Gigabyte, DEE
