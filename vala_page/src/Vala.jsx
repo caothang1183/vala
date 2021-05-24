@@ -18,6 +18,7 @@ import Alert from "@material-ui/lab/Alert";
 import NotFound from "./pages/PageNotFound/NotFound";
 import axios from "axios";
 import ScrollToTop from "./components/ScrollToTop";
+
 const reducer = (category, action) => {
   switch (action.type) {
     case "FETCH_SUCCESS":
@@ -61,7 +62,7 @@ const Kagency = () => {
   }, []);
   useEffect(() => {
     let isSubsribed = true;
-    axios.get("https://kagency-api.herokuapp.com/api/topics/").then(
+    axios.get("https://vala-web.herokuapp.com/api/topics/").then(
       (res) => {
         if (isSubsribed) {
           dispatch({ type: "FETCH_SUCCESS", payload: res.data });
@@ -104,6 +105,7 @@ const Kagency = () => {
               <Route path="/blog/:id" exact component={BlogDetailPage} />
               <Route path="/contact-us" exact component={Contact} />
               <Route path="/privacy-policy" exact component={PrivacyPolicy} />
+
               {routeComponents}
 
               <Route component={NotFound} />

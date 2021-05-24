@@ -29,7 +29,7 @@ const ProtectedRoute = ({ component: Component, role_id, user, ...rest }) => {
     let user = JSON.parse(localStorage.getItem("User"));
     let result = false;
     if (user) {
-      result = user.activated && !user.blocked && user.role_id !== 0;
+      result = !user.activated && !user.blocked && user.role_id !== 0;
     }
 
     return result;

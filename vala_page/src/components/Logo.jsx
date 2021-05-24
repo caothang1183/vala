@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LogoIcon from "../assets/images/logo.svg";
+import LogoIcon from "../assets/images/logo-vala.svg";
 import $ from "jquery";
 const Logo = ({ openmn }) => {
   const hanldeCloseNav = () => {

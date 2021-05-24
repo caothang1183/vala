@@ -14,17 +14,18 @@ import MoreBlog from "./components/MoreBlog";
 import Skeleton from "@material-ui/lab/Skeleton";
 
 const reducer = (state, action) => {
+  console.log(state);
   switch (action.type) {
     case "FETCH_SUCCESS":
       return {
-        loading: false,
+        loading: true,
         blogsdetail: action.payload,
         error: "",
       };
     case "FETCH_ERROR":
       return {
         error: "error",
-        loading: false,
+        loading: true,
         blogsdetail: {},
       };
     default:
@@ -34,22 +35,24 @@ const reducer = (state, action) => {
 
 const BlogDetailPage = () => {
   const { id } = useParams();
-  const [stateblogdetail, dispatch] = useReducer(reducer, {
-    loading: true,
+  const [blogDetail, dispatch] = useReducer(reducer, {
+    loading: false,
     blogsdetail: {},
     error: "",
   });
-  const load = stateblogdetail.loading;
+  const load = blogDetail.loading;
 
   useEffect(() => {
     let isSubscribed = true;
-    axios.get(`https://kagency-api.herokuapp.com/api/blogs/${id}`).then(
+    axios.get(`https://vala-web.herokuapp.com/api/blogs/${id}`).then(
       (res) => {
+        console.log(res.data);
         if (isSubscribed) {
           dispatch({ type: "FETCH_SUCCESS", payload: res.data });
         }
       },
       (error) => {
+        console.log(error);
         dispatch({ type: "FETCH_ERROR" });
       }
     );
@@ -57,21 +60,22 @@ const BlogDetailPage = () => {
       isSubscribed = false;
     };
   }, [id]);
+
   const BlogHeader = () => {
     const backgroundBanner = {
       backgroundImage: `linear-gradient(0deg, rgba(8,94,114, 0.4), rgba(8,94,114, 0.4)), 
         url('${
-          stateblogdetail.error === "error"
+          blogDetail.error === "error"
             ? "https://via.placeholder.com/1200x600.png?text=Kagency "
             : "" && load
             ? "https://via.placeholder.com/1200x600.png?text=Kagency"
-            : stateblogdetail.blogsdetail.url
+            : blogDetail.blogsdetail.url
         }')`,
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
       backgroundSize: "cover",
     };
-    var date = new Date(stateblogdetail.blogsdetail.created_at);
+    var date = new Date(blogDetail.blogsdetail.created_at);
     var date_create =
       (date.getDate() > 9 ? date.getDate() : "0" + date.getDate()) +
       "/" +
@@ -80,18 +84,17 @@ const BlogDetailPage = () => {
         : "0" + (date.getMonth() + 1)) +
       "/" +
       date.getFullYear();
-    // console.log(dt);
     return (
       <div className="BlogDetailHeader" style={backgroundBanner}>
         <div className="container">
           <MetaTags>
             <title>
-              {stateblogdetail.error === "error"
+              {blogDetail.error === "error"
                 ? "Sever is Not Available "
                 : "" && load
                 ? "Loading"
-                : stateblogdetail.blogsdetail.title}
-              | KAGENCY
+                : blogDetail.blogsdetail.title}
+              | VALA
             </title>
             <meta
               name="description"
@@ -101,45 +104,45 @@ const BlogDetailPage = () => {
             <meta
               property="og:title"
               content={
-                stateblogdetail.error === "error"
+                blogDetail.error === "error"
                   ? "No data "
                   : "" && load
                   ? "Loading"
-                  : stateblogdetail.blogsdetail.title
+                  : blogDetail.blogsdetail.title
               }
             />
             <meta
               property="og:image"
-              content={load ? "" : stateblogdetail.blogsdetail.url}
+              content={load ? "" : blogDetail.blogsdetail.url}
             />
           </MetaTags>
           <div className="row">
             <div className="col-12">
               <div className="title">
                 <h1>
-                  {stateblogdetail.error === "error" ? (
+                  {blogDetail.error === "error" ? (
                     <Skeleton animation="wave" width={"70%"} />
                   ) : "" && load ? (
                     <Skeleton animation="wave" variants="h1" width={"70%"} />
                   ) : (
-                    stateblogdetail.blogsdetail.title
+                    blogDetail.blogsdetail.title
                   )}
                 </h1>
               </div>
               <ul>
                 <li>
                   <FaUserCircle /> by{" "}
-                  {stateblogdetail.error === "error" ? (
+                  {blogDetail.error === "error" ? (
                     <Skeleton animation="wave" variants="h1" />
                   ) : "" && load ? (
                     <Skeleton animation="wave" variants="text" />
                   ) : (
-                    stateblogdetail.blogsdetail.created_by
+                    blogDetail.blogsdetail.created_by
                   )}
                 </li>
                 <li>
                   <FaRegCalendarAlt /> at{" "}
-                  {stateblogdetail.error === "error" ? (
+                  {blogDetail.error === "error" ? (
                     <Skeleton animation="wave" variants="h1" />
                   ) : "" && load ? (
                     <Skeleton animation="wave" variants="h1" />
@@ -157,16 +160,9 @@ const BlogDetailPage = () => {
 
   const createMarkup = () => {
     return {
-      __html: `${
-        stateblogdetail.error === "error"
-          ? "<p>Bài viết không tồn tại</p>"
-          : "" && load
-          ? "Loading"
-          : stateblogdetail.blogsdetail.content
-      }`,
+      __html: `${!load ? "" : blogDetail.blogsdetail.content}`,
     };
   };
-  // console.log(load ? "Loading" : stateblogdetail.blogsdetail.category_id);
   return (
     <Fragment>
       <div className="BlogDetailPage ql-editor">
@@ -183,15 +179,7 @@ const BlogDetailPage = () => {
             <img src={insGrey} alt="" />
           </div>
         </div>
-        <MoreBlog
-          category={
-            load ? (
-              <Skeleton animation="wave" variants="h1" />
-            ) : (
-              stateblogdetail.blogsdetail
-            )
-          }
-        />
+        <MoreBlog category={blogDetail.blogsdetail} />
         <ClientsLogo />
         <Footer />
       </div>

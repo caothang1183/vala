@@ -12,7 +12,7 @@ const AboutUs = () => (
   <Fragment>
     <div className="AboutUs">
     <MetaTags>
-            <title>About Us | KAGENCY</title>
+            <title>About Us | VALA</title>
             <meta name="description" content="KAGENCY tự hào được lựa chọn bởi các đối tác như: Samsung, Gigabyte, DEE
         Net, Vala… ." />
             <meta property="og:title" content="About Us | KAGENCY" />

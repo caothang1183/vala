@@ -35,7 +35,7 @@ const ProjectItem = ({ project, Loading }) => {
     useEffect(() => {
       let isSubscribed = true;
       //mount
-      axios.get(`https://kagency-api.herokuapp.com/api/topics/${idtopic}`).then(
+      axios.get(`https://vala-web.herokuapp.com/api/topics/${idtopic}`).then(
         (res) => {
           // console.log(res.data);
           if (isSubscribed) {

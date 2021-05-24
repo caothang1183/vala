@@ -29,13 +29,13 @@ const LoginPage = () => {
         //   authDispatch(loginSuccessAction(res.data.accessToken));
 
         console.log(user.activated && !user.blocked && user.role_id !== 0);
-        if (user.activated && !user.blocked && user.role_id !== 0) {
+        if (!user.activated && !user.blocked && user.role_id !== 0) {
           history.push("/dashboard");
           authDispatch(loginSuccessAction(res.data.accessToken));
         } else {
           alert("user is not permitted");
-          localStorage.removeItem("UserAdmin");
-          localStorage.removeItem("User");
+          // localStorage.removeItem("UserAdmin");
+          // localStorage.removeItem("User");
         }
       })
       .catch((err) => {

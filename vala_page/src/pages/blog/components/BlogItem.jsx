@@ -1,10 +1,25 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import "./BlogItem.scss";
 import Skeleton from "@material-ui/lab/Skeleton";
 
-const BlogItem = ({ blog, isMain = false, loading }) => {
-  // console.log(blog);
+const BlogItem = ({ blog, isMain = false, loading, category }) => {
+
+  const [categoryName, setCategoryName] = useState("")
+
+  useEffect(() => {
+    // console.log(category)
+    const index = category && category.findIndex(item => {
+      return item.id === blog.category_id
+    })
+    if(index!==-1){
+      setCategoryName(category[index].name)
+    }
+
+    
+  }, [blog, category])
+  
+   
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -13,6 +28,7 @@ const BlogItem = ({ blog, isMain = false, loading }) => {
   };
 
   if (blog === null) {
+   
     return (
       <div>
         {/* <Alert style={{ marginTop: "10px" }} severity="error">
@@ -21,6 +37,7 @@ const BlogItem = ({ blog, isMain = false, loading }) => {
       </div>
     );
   } else {
+    // console.log(blog)
     return (
       <div
         style={{ cursor: "pointer" }}
@@ -29,17 +46,14 @@ const BlogItem = ({ blog, isMain = false, loading }) => {
         {loading ? (
           <Skeleton variant="rect" className="sketonresponsive" />
         ) : (
-          <Link
-            to={`/blog/${loading ? "Loading.." : blog.id}`}
-            onClick={scrollToTop}
-          >
+          <Link to={`/blog/${blog.id}`} onClick={scrollToTop}>
             <img
               src={loading ? "Loading.." : blog.url}
               alt={loading ? "Loading.." : blog.title}
             />
             <div className="blog-category">
               Category{" "}
-              {loading ? <Skeleton variant="text" /> : blog.category_id}
+              {loading ? <Skeleton variant="text" /> : categoryName}
             </div>
             <h3>{loading ? <Skeleton variant="text" /> : blog.title}</h3>
           </Link>

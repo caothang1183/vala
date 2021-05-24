@@ -62,7 +62,7 @@ const Topic = () => {
       <div className="Branding">
         <div className="container">
           <MetaTags>
-            <title>{fromNotifications.name}| KAGENCY</title>
+            <title>{fromNotifications.name}| VALA</title>
             <meta
               name="description"
               content="Kagency tự hào được lựa chọn bởi các đối tác như: Samsung, Gigabyte, DEE

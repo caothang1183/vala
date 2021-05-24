@@ -39,7 +39,7 @@ const ProjectsComponent = ({
   useEffect(() => {
     let isSubscribed = true;
 
-    axios.get("https://kagency-api.herokuapp.com/api/projects").then(
+    axios.get("https://vala-web.herokuapp.com/api/projects").then(
       (res) => {
         if (isSubscribed) {
           dispatch({ type: "FETCH_SUCCESS", payload: res.data });
@@ -79,7 +79,7 @@ const ProjectsComponent = ({
     }
   }
 
-  if (!state.loading || state.projects.length === 0) {
+  if (!state.loading) {
     return (
       <Fragment>
         <div className="ProjectsComponent">
