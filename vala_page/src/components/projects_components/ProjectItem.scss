@@ -1,0 +1,60 @@
+.ProjectItem {
+  padding-bottom: 2em;
+  img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  .tags {
+    padding-top: 1em;
+
+    .project-tag {
+      color: dodgerblue;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding-right: 1em;
+    }
+  }
+  .card-body {
+    .card-title {
+      a {
+        color: grey;
+      }
+      a:hover {
+        color: dodgerblue;
+      }
+    }
+  }
+}
+#sekton {
+  padding-bottom: 5%;
+}
+
+.more-prjects {
+  padding-top: 2em;
+  text-align: center;
+}
+.sketonresponsive {
+  height: 350px !important;
+  background-color: whitesmoke !important;
+}
+.sktontitle {
+  background-color: whitesmoke !important;
+}
+@media screen and (max-width: 300px) {
+  #sekton {
+    width: 200px !important;
+  }
+  .sketonresponsive {
+    margin-left: 10%;
+
+    width: 250px !important;
+    height: 250px !important;
+  }
+  .sktontitle {
+    margin-left: 10%;
+
+    background-color: whitesmoke !important;
+    width: 250px !important;
+  }
+}

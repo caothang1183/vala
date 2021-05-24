@@ -1,0 +1,24 @@
+.News {
+    padding-bottom: 5em;
+    h3 {
+        text-transform: uppercase;
+    }
+    h4 {
+        color: gray;
+        padding-bottom: 2em;
+    }
+    .btn-more {
+        text-align: center;
+    }
+    .more-post {
+        margin-top: 2em;
+        font-size: 22px;
+        color: white;
+        background-color: midnightblue;
+        border-radius: 25px;
+    }
+    img {
+        height: 200px;
+        object-fit: cover;
+    }
+}

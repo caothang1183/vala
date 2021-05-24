@@ -1,0 +1,21 @@
+.imageUploader {
+  width: 400px;
+  .quill {
+    .ql-toolbar {
+      //   width: 20%;
+      background: #eaecec;
+      border-top-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+    }
+    .ql-container {
+      //   width: 20%;
+      .ql-editor {
+        color: black;
+        // display: none;
+      }
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+      background: #fefcfc;
+    }
+  }
+}

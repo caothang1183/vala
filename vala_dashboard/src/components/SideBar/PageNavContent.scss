@@ -1,0 +1,21 @@
+.sidebar {
+  .sidebar-heading {
+    font-size: 12px;
+  }
+  .nav-item {
+    .collapse,
+    .collapsing {
+      .collapse-inner {
+        padding: 0;
+        background-color: rgb(56, 82, 167);
+        .collapse-item {
+          color: rgba(255, 255, 255, 0.8);
+          &:hover {
+            background-color: transparent;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.ClientsLogo {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../assets/images/dot_bg.png");
+  background-size: 50px;
+  background-repeat: repeat;
+  text-align: center;
+  padding: 8em 5em;
+  h1 {
+    color: teal;
+    font-weight: bold;
+  }
+  img {
+    padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: 459px) {
+  .ClientsLogo {
+    .container {
+      .row {
+        .clientLogo-extra-small {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

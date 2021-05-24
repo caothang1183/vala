@@ -1,0 +1,31 @@
+.button-start-project-modal {
+  position: fixed;
+  bottom: 50px;
+  right: 150px;
+  background-color: rgba($color: black, $alpha: 0.6);
+  color: white;
+  border: 2px solid white;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 20px;
+  span {
+    z-index: 999;
+    position: relative;
+  }
+  :focus-visible {
+    outline: none;
+  }
+}
+
+.project-button-dark {
+  background-color: rgba($color: white, $alpha: 0.9);
+  color: black;
+  border: none;
+}
+
+@media screen and (max-width: 671px) {
+  .button-start-project-modal {
+    bottom: 50px;
+    left: 20px;
+  }
+}

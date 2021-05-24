@@ -1,0 +1,31 @@
+body {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.dark-mode {
+  background-color: rgb(12, 1, 1) !important;
+  color: white;
+}
+
+.dark-mode :hover {
+  color: white;
+}
+.navtest {
+  background-color: aqua;
+}
+#page-top {
+  background-color: rgb(241, 244, 245);
+}
+#wrapper {
+  background-color: black;
+}
+#content-wrapper {
+  background-color: aquamarine;
+}
+#collapseKagency {
+  color: white;
+}
+.sticky-footer {
+  box-shadow: rgb(41, 126, 76);
+}

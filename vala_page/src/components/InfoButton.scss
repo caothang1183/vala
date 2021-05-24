@@ -1,0 +1,63 @@
+.InfoButton {
+  a {
+    text-decoration: none;
+    color: #001d26;
+  }
+  background-color: transparent;
+  border: 2px solid #001d26;
+  color: #001d26;
+  padding: 0.2em 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  border-radius: 15px;
+}
+
+.InfoButton:hover {
+  color: white;
+  background-color: #001d26;
+  a {
+    color: white;
+  }
+}
+
+.InfoButton-padding:hover {
+  color: white;
+  background-color: #001d26;
+  a {
+    color: white;
+  }
+}
+
+.InfoButton-padding {
+  a {
+    text-decoration: none;
+    color: #001d26;
+  }
+
+  background-color: transparent;
+  border: 2px solid #001d26;
+  color: #001d26;
+  padding: 0.2em 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  border-radius: 15px;
+}
+
+.dark {
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  a {
+    color: white;
+  }
+}

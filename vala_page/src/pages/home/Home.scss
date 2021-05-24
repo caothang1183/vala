@@ -1,0 +1,22 @@
+@import "/src/scss/variables.scss";
+@import "/src/assets/css/animate.min.css";
+$bgcolor1: #001d26;
+$bgcolor2: #fff;
+.Home {
+  transition: all 1s ease;
+  margin: auto;
+  .projects-component {
+    transition: background-color 0.3s ease-in-out 0s;
+    padding: 5em 0;
+    .projects-header {
+      padding-bottom: 2em;
+    }
+  }
+}
+.change-background {
+  background-color: #001d26;
+  transition: background-color 0.3s ease-in-out 0s;
+}
+.introduction {
+  font-size: 20px;
+}
