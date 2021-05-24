@@ -52,8 +52,13 @@ const BlogItem = ({ blog, isMain = false, loading, category }) => {
               alt={loading ? "Loading.." : blog.title}
             />
             <div className="blog-category">
-              Category{" "}
-              {loading ? <Skeleton variant="text" /> : categoryName}
+              {category.length===0 ? <div></div> : (
+                <>
+                 Category{" "}
+                 {loading ? <Skeleton variant="text" /> : categoryName}
+                 </>
+              )}
+             
             </div>
             <h3>{loading ? <Skeleton variant="text" /> : blog.title}</h3>
           </Link>
