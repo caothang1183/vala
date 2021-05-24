@@ -1,0 +1,425 @@
+/*
+
+Theme Kagency;
+Copyight (c) 2021  Kagency Co.,Ltd . All right reserved;
+Develop by Thi Nguyen
+Website : https://kagenecy.vn
+Email: team-dev@kagency.vn
+
+*/
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #04293a;
+  background-image: linear-gradient(
+      90deg,
+      rgba(8, 94, 114, 1),
+      rgba(8, 94, 114, 0.6)
+    ),
+    url(https://codelearn.io/Media/Default/Users/BugFixed/Thuy/alphagamma-teamwork-3-steps-to-build-a-strong-team-entrepreneurship.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+  transition: 1s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  transition: 1s;
+  -webkit-animation-name: menuIndown;
+  animation-name: menuIndown;
+}
+
+.logoicon {
+  position: absolute;
+  top: 0;
+  color: #f1f1f1;
+  margin-left: 0;
+  opacity: 2;
+}
+.socialicon {
+  position: absolute;
+  bottom: 5%;
+  color: #f1f1f1;
+  margin-left: 5%;
+}
+.newproject {
+  position: absolute;
+  bottom: 5%;
+  color: #f1f1f1;
+  right: 10%;
+}
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 29px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  -moz-animation: slide 1s ease 2s forwards;
+  -webkit-animation: slide 1s ease 2s forwards;
+  -o-animation: slide 1s ease 2s forwards;
+  -ms-animation: slide 1s ease 2s forwards;
+  animation: slide 0.5s ease 2s forwards;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: darkturquoise;
+}
+#menusub {
+  display: none;
+  position: absolute;
+  top: 10%;
+  right: 25%;
+  font-size: 10px;
+}
+.fa-times {
+  color: white;
+}
+.fa-bar {
+  color: white;
+}
+.head-nav {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  .overlay .closebtn {
+    float: right;
+    font-size: 60px;
+    color: whitesmoke;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  top: 20%;
+  right: 32%;
+  font-size: 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.dropup-content a {
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+  color: white;
+  text-align: left;
+  -webkit-animation-duration: 3s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transition: 1s;
+}
+
+.dropup-content a:hover {
+  color: darkturquoise;
+}
+
+.dropup:hover .dropup-content {
+  display: block;
+}
+.menu-animantion {
+  -webkit-animation-name: menuIndown;
+  animation-name: menuIndown;
+  transition: 0.5s;
+}
+@-webkit-keyframes menuIndown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuIndown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* The Overlay Modal (background) */
+.overlaymodal {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: #04293a;
+  background-image: linear-gradient(
+      90deg,
+      rgba(8, 94, 114, 1),
+      rgba(8, 94, 114, 0.6)
+    ),
+    url(https://codelearn.io/Media/Default/Users/BugFixed/Thuy/alphagamma-teamwork-3-steps-to-build-a-strong-team-entrepreneurship.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlaymodal-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+#menumobile {
+  color: #818181;
+  padding: 8px;
+}
+.menunav {
+}
+
+/* The navigation links inside the overlay */
+.overlaymodal a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlaymodal a:hover,
+.overlaymodal a:focus {
+  color: #f1f1f1;
+}
+
+/* .dropup:hover .dropbtn {
+} */
+
+/* For 1280px laptop Resolution */
+
+@media only screen and (min-device-width: 900px) and (max-device-width: 1440px) {
+  .dropup-content {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    font-size: 10px;
+    color: white;
+    transition: 1s;
+  }
+}
+@media only screen and (min-device-width: 600px) and (max-device-width: 1150px) {
+  .dropup-content {
+    opacity: 0;
+  }
+  .dropup-content a:hover {
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-device-width: 900px) and (max-device-width: 1300px) {
+  .dropup-content {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    font-size: 10px;
+    color: white;
+    transition: 1s;
+  }
+}
+// @media only screen and (min-device-width: 1200px) and (max-device-width: 1920px) {
+//   .dropup-content {
+//     position: absolute;
+//     top: 25%;
+//     right: 25%;
+//     font-size: 10px;
+//     color: white;
+//     transition: 1s;
+//   }
+// }
+@media only screen and (min-device-width: 1100px) and (max-device-width: 1920px) {
+  .dropup-content {
+    position: absolute;
+    top: 25%;
+    margin-left: 5%;
+    font-size: 10px;
+    color: white;
+    transition: 1s;
+  }
+}
+@media only screen and (min-device-width: 1050px) and (max-device-width: 1680px) {
+  .dropup-content {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    font-size: 10px;
+    color: white;
+    transition: 1s;
+  }
+}
+@media only screen and (min-device-width: 800px) and (max-device-width: 1280px) {
+  .dropup-content {
+    position: absolute;
+    top: 25%;
+    right: 22%;
+    font-size: 10px;
+    color: white;
+    transition: 1s;
+  }
+}
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .menunav {
+    padding: 0px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  .dropup-content {
+    display: none;
+  }
+  .dropup:hover .dropup-content {
+    display: none;
+    opacity: 0;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .logomobile {
+    width: 50%;
+    height: auto;
+  }
+  .MuiButton-label {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    margin-top: 0%;
+
+    position: absolute;
+    margin-top: 0%;
+    top: 0;
+    color: white;
+  }
+  .fa-bar {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@media (orientation: portrait) {
+  .overlay {
+    overflow-y: auto;
+  }
+  #menumobile {
+    display: none;
+  }
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 10px;
+    right: 15px;
+  }
+  .dropup-content a:hover {
+    opacity: 0;
+  }
+
+  .button-start-project-modal {
+    float: right;
+  }
+  .socialicon {
+    display: none;
+  }
+
+  .dropup-content a {
+    opacity: 0;
+  }
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(205, 215, 231);
+    display: block;
+  }
+  .fa-bar {
+    color: white;
+  }
+  .dropup-content {
+    display: none;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,76 @@
+$banner-height: 50em;
+
+.Banner {
+  height: $banner-height;
+  padding: 10px;
+  font-family: sans-serif;
+  background: url("../../../assets/images/dot_wage.png"), url("../../../assets/images/home_banner.png");
+  background-size: auto;
+  background-position: right; /* Center the image */
+  background-repeat: no-repeat;
+  .title {
+    height: $banner-height;
+    position: absolute;
+    top: 10em;
+    width: 35%;
+    p {
+      font-size: 14px;
+      color: gray;
+      font-weight: 600;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 38px;
+      letter-spacing: 1px;
+      color: #003366;
+    }
+    span {
+      align-self: end;
+      color: #003366;
+      background-color: palegreen;
+      display: inline-block;
+      padding: 0px;
+      height: 0.4em;
+      line-height: 0.2;
+    }
+    button {
+      font-size: 14px;
+      padding: 0.3em 2em;
+      box-shadow: 2px 5px 5px #aaaaaa;
+      background-color: #1dcce0;
+      border-color: #1dcce0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .Banner {
+    .title {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .Banner {
+    .title {
+      width: 35%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .Banner {
+    .title {
+      width: 35%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Banner {
+    .title {
+      width: 24%;
+    }
+  }
+}

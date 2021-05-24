@@ -1,0 +1,45 @@
+.rowTable {
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .img{
+    width: 100%;
+  }
+}
+
+.addBlog {
+  .addBlog__form {
+    p {
+      margin-bottom: 5px;
+    }
+    select{
+      width: 30%;
+      border-radius: 5px;
+      border: 1px solid #dadfe2;
+      margin: 0 0 15px;
+      padding: 8px 12px;
+      &:focus{
+        outline: none;
+      }
+    }
+    textarea {
+      width: 30%;
+      border-radius: 10px;
+      border: 1px solid #dadfe2;
+  
+      margin: 0 0 15px;
+      outline: none;
+      padding: 8px 12px;
+      font-size: 15px;
+    }
+    .btn.btn-primary {
+      padding: 5px 20px;
+      margin: 0 0 15px;
+    }
+    .text-danger{
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}

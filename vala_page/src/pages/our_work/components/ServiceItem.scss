@@ -1,0 +1,43 @@
+.ServiceItem {
+  padding-bottom: 2em;
+  .reverse-col {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .service-image {
+    width: 100%;
+    height: 30em;
+    object-fit: fill;
+  }
+
+  .service-content {
+    margin: auto;
+    width: 70%;
+    padding: 5em 0;
+    h1 {
+      color: teal;
+      font-weight: bold;
+      font-size: 65px;
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 671px) {
+  .ServiceItem {
+    .service-item {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .service-content {
+      margin: auto;
+      width: 90%;
+      padding: 2em 0;
+    }
+    .service-image {
+      width: 100%;
+      height: 18em;
+      object-fit: fill;
+    }
+  }
+}

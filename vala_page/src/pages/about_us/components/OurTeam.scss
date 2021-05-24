@@ -1,0 +1,89 @@
+.OurTeam {
+  background-color: #001d26;
+  position: relative;
+  .bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 41em;
+    width: 15em;
+    z-index: 1;
+    filter: blur(3px);
+    background: url("../../../assets/images/dot_bg.png");
+    background-position: left;
+    background-repeat: repeat;
+  }
+  .ourteam-image {
+    position: relative;
+    padding: 2em 5em;
+    justify-content: center;
+    align-items: center;
+
+    .col-6:nth-child(1) {
+      z-index: 2;
+      padding-right: 15em;
+    }
+    .col-6:nth-child(2) {
+      z-index: 2;
+      padding-right: 15em;
+    }
+    h3 {
+      width: 5em;
+      color: lightblue;
+      padding-right: 1em;
+      font-size: 110px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    p {
+      color: #4d6978;
+      font-weight: bold;
+      font-size: 24px;
+    }
+  }
+
+  .kagency {
+    background: url("../../../assets/images/dot_wage.png");
+    background-size: auto;
+    background-position: right; /* Center the image */
+    background-repeat: no-repeat;
+    padding: 2em 5em;
+    align-items: center;
+    h4 {
+      color: lightblue;
+      font-size: 45px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    h3 {
+      color: dodgerblue;
+      font-size: 85px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 671px) {
+  .OurTeam {
+    .ourteam-image {
+      padding: 2em 2em;
+      h3 {
+        font-size: 45px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .kagency {
+      padding: 2em 2em;
+      h4 {
+        font-size: 45px;
+      }
+      h3 {
+        font-size: 35px;
+      }
+    }
+  }
+}

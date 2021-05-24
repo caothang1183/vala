@@ -1,0 +1,59 @@
+.PageDescription {
+  min-height: 50em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  .title {
+    margin: auto;
+    align-items: center;
+    h1 {
+      font-size: 100px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: teal;
+    }
+  }
+  .content {
+    text-align: left;
+    padding: 0 5em;
+    font-weight: 500;
+    h3 {
+      color: gray;
+      padding-bottom: 1em;
+    }
+    p {
+      font-size: 16px;
+      color: black;
+    }
+  }
+}
+
+@media only screen and (max-width: 671px) {
+  .PageDescription {
+    padding-top: 10em;
+    padding-bottom: 4em;
+    .title {
+      width: 90%;
+      padding: 0;
+      h1 {
+        font-size: 55px;
+      }
+    }
+    .content {
+      padding: 0 3em;
+    }
+  }
+}
+
+@media only screen and (min-width: 672px) and (max-width: 1024px) {
+  .PageDescription {
+    padding-top: 10em;
+    .title {
+      width: 90%;
+      padding: 0;
+      h1 {
+        font-size: 90px;
+      }
+    }
+  }
+}

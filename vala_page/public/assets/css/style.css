@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+p {
+  font-size: 1rem; }
+  @media (max-width: 479px) {
+    p {
+      font-size: 12px; } }
+
+ul {
+  list-style: none; }
+
+.hide {
+  display: none !important;
+  duration: 3s; }
+
+.header-section {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: #001d26; }
+
+.navbar {
+  height: 90px;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 700; }
+  .navbar .logo {
+    width: 140px; }
+    @media (max-width: 479px) {
+      .navbar .logo {
+        width: 100px; } }
+  .navbar ul {
+    margin-left: 55%;
+    width: 18%;
+    justify-content: space-between; }
+    @media (max-width: 479px) {
+      .navbar ul {
+        display: none; } }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .navbar ul {
+        margin-left: 25%;
+        width: 30%; } }
+    .navbar ul a {
+      text-decoration: none; }
+
+.NavButtonModal {
+  align-items: center;
+  background-color: #001d26;
+  padding-bottom: 0;
+  top: 0 !important;
+  min-width: 100% !important;
+  height: 100%; }
+  @media (max-width: 479px) {
+    .NavButtonModal {
+      margin: 0 !important; } }
+  .NavButtonModal .ant-modal-close-x {
+    color: #fff;
+    font-size: 30px; }
+  .NavButtonModal .ant-modal-content {
+    background-color: transparent; }
+  .NavButtonModal .ant-modal-footer {
+    display: none; }
+
+.main-menu {
+  margin-left: 40%;
+  margin-top: 10%;
+  font-size: 46px;
+  font-weight: 700; }
+  @media (max-width: 479px) {
+    .main-menu {
+      font-size: 24px;
+      font-weight: 500;
+      margin-left: 0;
+      margin-top: 0;
+      text-align: center; } }
+
+.sub-menu {
+  font-size: 38px; }
+
+.logo-block {
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto; }
+  .logo-block ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0; }
+  .logo-block .logo-item {
+    padding: 20px; }
+    @media (max-width: 479px) {
+      .logo-block .logo-item {
+        padding: 5px; } }
+    .logo-block .logo-item img {
+      max-width: 350px; }
+      @media (max-width: 479px) {
+        .logo-block .logo-item img {
+          max-width: 120px; } }
+
+.footer {
+  clear: both;
+  position: relative;
+  color: #fff;
+  background-color: #001d26; }
+  .footer .footer-content {
+    padding: 2em 0em;
+    margin: auto; }
+    .footer .footer-content h3 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 16px; }
+  .footer .footer-info {
+    padding-bottom: 2em; }
+    .footer .footer-info ul {
+      padding-left: 0; }
+      .footer .footer-info ul svg {
+        margin-right: 0.3em; }
+    .footer .footer-info .subscribe span {
+      text-decoration: none;
+      color: #4099f1;
+      font-size: 22px;
+      font-weight: 500; }
+  .footer .footer-iconlink {
+    padding-bottom: 2em;
+    display: flex;
+    margin: 0 auto; }
+    .footer .footer-iconlink .icon {
+      border: 1px solid #fff;
+      border-radius: 50%;
+      padding: 5px;
+      margin: 10px 15px;
+      width: 40px;
+      height: 40px;
+      color: #fff; }
+    .footer .footer-iconlink .icon:nth-child(1) {
+      margin-left: 0; }
+    .footer .footer-iconlink img {
+      height: 40px;
+      margin: 8px 10px; }
+    .footer .footer-iconlink img:nth-child(1) {
+      margin-left: 0; }
+  .footer .footer-servicelink a {
+    color: #aaa;
+    padding-bottom: 0.4em;
+    font-size: 18px;
+    font-weight: bold; }
+
+.bottom-bar {
+  color: #fff;
+  background-color: #4099f1;
+  padding: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-between; }
+  .bottom-bar a {
+    color: white;
+    text-decoration: none; }
+  .bottom-bar .copyright {
+    width: 100%; }
+    .bottom-bar .copyright ul {
+      padding: 0;
+      position: absolute;
+      right: 0px; }
+    .bottom-bar .copyright li {
+      display: inline;
+      padding-right: 5em; }
+    .bottom-bar .copyright .col-12:nth-child(1) {
+      padding-left: 5em; }
+
+@media (max-width: 671px) {
+  .footer .footer-content {
+    padding: 2em; }
+  .bottom-bar .copyright ul {
+    position: static;
+    text-align: center; }
+  .bottom-bar .copyright li {
+    display: list-item;
+    padding-right: 0; }
+  .bottom-bar .copyright .col-12:nth-child(1) {
+    padding-left: 0;
+    text-align: center; } }

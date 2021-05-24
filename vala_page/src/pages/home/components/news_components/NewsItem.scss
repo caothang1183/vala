@@ -1,0 +1,51 @@
+.tags {
+    padding: 0.5em 0;
+
+    .new-tag {
+        color: dodgerblue;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding-right: 1em;
+    }
+}
+
+.card-border {
+    border: 1px solid rgba(232, 232, 232, 1);
+
+    padding: 1em;
+}
+
+.card-body {
+    padding: 0 !important;
+
+    h5 {
+        color: #aaa;
+        font-weight: bold;
+    }
+    .card-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 20px;     /* fallback */
+        height: 40px;  
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+    .card-description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 16px;     /* fallback */
+        max-height: 32px;      /* fallback */
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+    .read-more{
+        text-align: end;
+        padding: 1em 0 1em 1em;
+        svg {
+            margin-left: 0.2em;
+            height: 12px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.addBranding {
+  .addBranding__form {
+    input,
+    textarea {
+      width: 400px;
+      border-radius: 10px;
+      border: 1px solid #dadfe2;
+      margin: 0 0 15px;
+      outline: none;
+      padding: 8px 12px;
+      font-size: 15px;
+    }
+    input {
+      border-radius: 5px;
+    }
+    .text-danger {
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}

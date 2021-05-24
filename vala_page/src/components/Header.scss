@@ -1,0 +1,40 @@
+.nav-item {
+  a {
+    color: gray;
+  }
+}
+.navbar {
+  .logo {
+    width: 100px !important;
+    background-color: #001d26;
+    padding: 5px 15px;
+    border-radius: 10px;
+  }
+}
+.menu-collapse {
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+
+.ant-btn-primary {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.fa-bars {
+  color: gray !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-item {
+    a {
+      color: black;
+    }
+  }
+  .fa-bars {
+    color: aliceblue(238, 222, 222) !important;
+  }
+  .fa-time {
+    color: aliceblue(238, 222, 222) !important;
+  }
+}

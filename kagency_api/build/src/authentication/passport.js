@@ -1,0 +1,23 @@
+"use strict";
+const LocalStrategy = require("passport-local").Strategy;
+const passport = (passport) => {
+    passport.use(new LocalStrategy({ usernameField: "username" }, (username, password, done) => {
+        // User.findOne({ username: username }).then(user => {
+        //     if (!user) {
+        //         return done(null, false, { message: "Username is not exist" });
+        //     }
+        //     bcrypt.compare(password, user.password, (err, isMatch) => {
+        //         if (err) throw err;
+        //         if (isMatch) {
+        //             return done(null, user);
+        //         } else {
+        //             return done(null, false, { message: "Password incorrect" });
+        //         }
+        //     });
+        // });
+    }));
+    passport.serializeUser((user, done) => { });
+    passport.deserializeUser((id, done) => { });
+};
+module.exports = passport;
+//# sourceMappingURL=passport.js.map

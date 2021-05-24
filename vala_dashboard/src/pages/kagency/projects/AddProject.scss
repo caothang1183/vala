@@ -1,0 +1,23 @@
+.project-content {
+  .form {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 50% 50%;
+    .grid-item {
+      width: 100%;
+      input,
+      select,
+      textarea {
+        padding-left: 6px;
+      }
+      select,
+      .input-name {
+        height: 40px;
+        width: 100%;
+      }
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.Blog {
+  .blog-content {
+    padding-top: 2em;
+  }
+  .categories {
+    text-align: center;
+    ul {
+      padding: 0;
+      margin-top: 1em;
+      align-items: center;
+    }
+    li {
+      display: inline-block;
+      .category-item {
+        text-align: center;
+        width: 9em;
+        color: #001d26;
+        border: 2px solid #001d26;
+        padding: 0.2em 0.5em;
+        margin-right: 0.5em;
+        font-weight: bold;
+        border-radius: 20px;
+        text-transform: uppercase;
+      }
+      .category-item.active {
+        border: 2px solid #001d26;
+        background-color: #001d26;
+        color: white;
+      }
+    }
+  }
+  .more {
+    text-align: center;
+    margin: 1em auto;
+  }
+}

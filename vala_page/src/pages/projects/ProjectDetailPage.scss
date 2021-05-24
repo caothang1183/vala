@@ -1,0 +1,83 @@
+.ProjectDetailPage {
+  .project-content {
+    @for $i from 1 through 5 {
+      @if $i % 2 == 0 {
+        //use $i for calculating mod here than #{$i}
+        #para-#{$i} {
+          background-color: #212529;
+          h1 {
+            color: lightblue;
+          }
+          p {
+            color: lightblue;
+          }
+        }
+      } @else {
+        #para-#{$i} {
+          h1 {
+            color: teal;
+          }
+        }
+      }
+    }
+    .para {
+      padding: 2em 10em;
+      margin: auto;
+      h1 {
+        text-align: center;
+        padding-bottom: 0.5em;
+        font-size: 65px;
+        font-weight: 500;
+      }
+      p {
+        margin: auto;
+        margin-bottom: 0.5em;
+        font-size: 16px;
+        font-weight: 500;
+        width: 80%;
+      }
+    }
+    .para:last-child {
+      padding-bottom: 8em;
+    }
+    img {
+      margin: auto;
+      width: 100%;
+      height: 30em;
+      object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: 671px) {
+  .ProjectDetailPage {
+    .project-content {
+      .para {
+        padding: 0.4em 0.2em;
+        margin: auto;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .ProjectDetailPage {
+    .project-content {
+      text-align: center;
+      .para {
+        padding: 5em;
+        p {
+          text-align: left;
+          width: 50%;
+        }
+      }
+      img {
+        height: 40em;
+      }
+    }
+  }
+}

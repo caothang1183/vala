@@ -1,0 +1,25 @@
+.privacy{
+    background-image: url("https://www.creativefabrica.com/wp-content/uploads/2018/11/Cyber-Lock-security-padlock-Background-by-ojosujono96-580x387.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 180px;
+    text-align: left;
+    top: 0;
+
+}
+.btntext{
+    position: absolute;
+    top: 120px;
+    color: white;
+}
+@media (orientation: portrait) {
+    .privacy{
+        background-image: url(https://www.creativefabrica.com/wp-content/uploads/2018/11/Cyber-Lock-security-padlock-Background-by-ojosujono96-580x387.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: #464646;
+    }
+  }

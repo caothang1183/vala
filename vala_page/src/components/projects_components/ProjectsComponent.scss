@@ -1,0 +1,33 @@
+.ProjectsComponent {
+  margin: auto;
+  padding: 0 2em;
+  .reverse-row {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .card-body {
+    padding-left: 0;
+  }
+  .odd-col {
+    h4 {
+      color: lightblue;
+    }
+    h3 {
+      color: dodgerblue;
+    }
+    p {
+      color: lightblue;
+    }
+  }
+  .even-col {
+    h4 {
+      color: lightblue;
+    }
+    h3 {
+      color: dodgerblue;
+    }
+    p {
+      color: lightblue;
+    }
+  }
+}
